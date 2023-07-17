@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  * {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  }
+  
+}
+
+@layer utilities {
+  .bg-custom-gradient-purple {
+    background: linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.12) 0%,
+        rgba(204, 235, 235, 0) 100%
+      ),
+      #5d35d0;
+  }
+  .bg-custom-gradient-blue {
+    background: linear-gradient(
+        145deg,
+        rgba(215, 237, 237, 0.12) 0%,
+        rgba(204, 235, 235, 0) 100%
+      ),
+      #4e6fe3;
+  }
+  .bg-progress-bar-foreground {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), linear-gradient(222deg, #4870FF 0%, #6A88F2 43.75%, #6E4BD2 100%);
+  }
+  .bg-app-blue-header {
+    background: radial-gradient(54.40% 54.40% at 50.00% 45.60%, rgba(227, 219, 189, 0.20) 0%, rgba(32, 60, 77, 0.20) 100%),  #4E6FE3;
+  }
+}
