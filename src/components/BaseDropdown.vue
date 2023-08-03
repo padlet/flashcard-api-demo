@@ -6,6 +6,7 @@ export interface DropdownOption {
   key?: string;
   onClick: () => void;
   iconUrl?: string;
+  colorClass?: string;
 }
 defineProps<{
   options?: DropdownOption[];
@@ -29,7 +30,7 @@ onMounted(() => {
 <template>
   <div
     ref="dropdownRef"
-    class="absolute top-14 right-4 w-[280px] bg-black rounded-xl z-10"
+    class="absolute top-14 right-4 w-[280px] bg-black-100 rounded-xl z-10"
   >
     <div class="p-1 gap-4">
       <button
@@ -40,7 +41,7 @@ onMounted(() => {
       >
         {{ option.label }}
         <div
-          class="icon bg-white-50 h-6 w-6 ml-auto"
+          :class="['icon h-6 w-6 ml-auto', option.colorClass || 'bg-white-50']"
           :style="{
             mask: `url(${option.iconUrl}) no-repeat center`,
             '-webkit-mask': `url(${option.iconUrl}) no-repeat center`,

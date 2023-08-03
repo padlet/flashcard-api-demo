@@ -9,6 +9,7 @@ import { useRouter } from "vue-router";
 import { storeToRefs } from "pinia";
 import { useAppStore } from "@/stores/appStore";
 import { ApiKeyError, BoardIdError } from "@/services/errorService";
+import AppHeader from "@/components/AppHeader.vue";
 const { initializeDeck } = useAppStore();
 const RightArrowIcon = defineAsyncComponent(
   () => import("@/assets/icons/right-arrow.svg")
@@ -55,11 +56,11 @@ async function handleTimeToLearn() {
 </script>
 
 <template>
-  <header class="w-full flex flex-col"></header>
+  <AppHeader />
   <main
     class="flex flex-col items-center w-full flex-1 justify-evenly p-4 max-w-[480px] mx-auto"
   >
-    <span class="text-black font-semibold text-5xl leading-tight"
+    <span class="text-dark-text-100 font-semibold text-5xl leading-tight"
       >Learning with Linh</span
     >
     <div class="flex w-full flex-col gap-4">
