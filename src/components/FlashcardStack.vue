@@ -81,7 +81,7 @@ const cardHeight = computed(() => (document.body.clientHeight - 100) * 0.6);
         <BaseChiclet
           class="absolute top-8 right-6 rotate-12 opacity-0 return-chiclet z-10"
           color="PrimaryPurple"
-          >RETURN</BaseChiclet
+          >SKIP</BaseChiclet
         >
 
         <Flashcard
